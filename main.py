@@ -3,6 +3,7 @@
 MAX_TASKS = 10
 
 
+# Adding a task
 def add_task(tasks, description):
     """
     Adds a task with a description.
@@ -11,4 +12,13 @@ def add_task(tasks, description):
     if len(tasks) >= MAX_TASKS:
         return False
     tasks.append({"description": description, "done": False})
+    return True
+
+
+# Completing a task
+def complete_task(tasks, index):
+    """Mark a task as done."""
+    if index < 0 or index >= len(tasks):
+        return False
+    tasks[index]["done"] = True
     return True
