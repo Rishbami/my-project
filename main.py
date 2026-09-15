@@ -33,3 +33,11 @@ def remove_task(tasks, index):
         return False
     tasks.pop(index)
     return True
+
+
+# List all tasks:
+def list_tasks(tasks):
+    """List all tasks."""
+    for i, task in enumerate(tasks):
+        status = "✓" if task["done"] else "✗"
+        print(f"[{status}] {i + 1}. {task['description']}")
