@@ -22,3 +22,14 @@ def complete_task(tasks, index):
         return False
     tasks[index]["done"] = True
     return True
+
+
+# Remove a task
+def remove_task(tasks, index):
+    """Remove a task."""
+    # Check if index is valid
+    # if valid, remove
+    if index < 0 or index >= len(tasks):
+        return False
+    tasks.pop(index)
+    return True
